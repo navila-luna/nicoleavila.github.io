@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    
 }
 
 .homeBackground{
@@ -20,6 +20,7 @@
         position: relative;
         z-index: 3;
         text-align: center;
+        font-family: 'Lato', sans-serif;
 }
 .container .text{
     position: relative;

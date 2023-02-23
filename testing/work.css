@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+    width: 100%;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+}
+.row {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    
+  }
+  
+.column {
+    flex: 33.33%;
+    padding: 5px;
+    display: block;
+    position: relative;
+    z-index: 3;
+  }
+.audio1 {
+    color: white;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    height: 100%;
+}
+.audio2 {
+    color: white;
+    text-align: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: purple;
+    height: 100%;
+}
+.netart1 img{
+    text-align: center;
+    border-width:2px;
+    border-style:solid;
+    border-color: greenyellow;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.netart1 {
+    color: white;
+    text-align: center;
+    border-width:2px;
+    border-style:solid;
+    border-color: greenyellow;
+    height: 100%;
+}

@@ -13,12 +13,12 @@ body{
 }
 .gustavo, .sequencer{
     display: flex;
-    width: 500px;
+    width: 450px;
     height: 450px;
     border-radius: 12px;
 }
 p {
-    font-size: 20px;
+    font-size:30px;
     font-weight: 200;
     line-height: 28px;
     margin-top: 8px;
@@ -58,8 +58,24 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 50px;
+}
+/* .git-box{
+    width:10%;
+    height:10%;
+} */
+.github{
+    border-radius: 15px;
+    width: 40px;
+    margin-left: 20px;
+}
+.url{
+    background: -webkit-linear-gradient(#e66465, #9198e5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .equal{
+    font-size: 12.5em;
     margin-left: 450px;
     padding: 150px;
 }
@@ -79,7 +95,14 @@ iframe {
     padding: 2px;
     border-radius: 12px;
 }
+figcaption{
+    padding: 8px;
+    font-size: 1.5em;
+}
 h1{
     font-size: 6.5em;
     text-shadow: 5px 5px #558ABB;
+}
+.equals{
+    font-size: 12.5em;
 }

@@ -1,8 +1,9 @@
 * {
-    /* font-family: 'Lato', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
 }
 body {
     background: black;
@@ -27,10 +28,18 @@ h3 {
 }
 p {
     font-size: 30px;
+    font-weight: 200;
     line-height: 2;
-    font-family: 'Lato', sans-serif;
-    padding: 35px;
+    margin-top: 8px;
+    padding-bottom: 28px;
+    padding: 5px;
 }
+.text-container{
+    padding: 5px;
+    padding-left: 10em;
+    padding-right: 5em;
+}
+
 .aboutme {
     color: white;
     display:block;

@@ -125,7 +125,7 @@ nav a {
   top: 7px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1090px) {
   .nav-toggle-label {
     display: none;
   }

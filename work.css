@@ -1,62 +1,237 @@
 body, html {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 3;
+.container{
+  padding: 75px;
+  margin-top: 25px;
 }
-.row {
-    display: flex;
-    width: 90%;
-    margin: auto;
-    
-  }
-  
-.column {
-    flex: 33.33%;
-    padding: 5px;
-    display: block;
-    position: relative;
-    z-index: 3;
-  }
-.audio1 {
-    color: white;
-    text-align: center;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    height: 100%;
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px 100px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
 }
-.audio2 {
-    color: white;
-    text-align: center;
-    border-width: 2px;
-    border-style: solid;
-    border-color: purple;
-    height: 100%;
-}
-.netart1 img{
-    text-align: center;
-    border-width:2px;
-    border-style:solid;
-    border-color: greenyellow;
-    width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
 
+.artware, 
+.sequencers,
+.videos, 
+.music, 
+.inProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 250px;
+  height: 150px;
+  text-align: center; 
+  border-radius: 10px;
+  background-image:  linear-gradient(45deg, rgba(174, 0, 255, 0.983), rgb(255, 106, 65));
+  border: 1px solid black;
+  z-index: 2;
+  color: white;
+  font-size: large;
+  font-family: 'Lato', sans-serif;
+    
 }
-.netart1 {
-    color: white;
-    text-align: center;
-    border-width:2px;
-    border-style:solid;
-    border-color: greenyellow;
-    height: 100%;
+.box-container {
+  position: relative;
+  margin: 10px; 
+}
+.box-container a{
+  display: block;
+  text-decoration: none;
+}
+
+.sequencers-layer {
+  width: 400px;
+  height: 300px;
+  background-color: black; 
+  background-image: linear-gradient(to right, white 10%, transparent 20%),
+  linear-gradient(to bottom, white 20%, transparent 20%);
+  background-size: 20px 20px; 
+  border-radius: 10px;
+  /* rgb(236, 0, 146); */
+}
+
+.music-layer {
+  width: 450px;
+  height: 350px;
+  background-image: url('./Images/nicolita.jpeg'); 
+  background-size: cover; 
+  background-position: center;
+  border-radius: 10px;
+
+} 
+ .video-layer {
+  width: 350px;
+  height: 300px;
+  background-image: url('./Images/maxMugicMagic.jpeg'); 
+  background-size: cover; 
+  background-position: center;
+  border-radius: 10px;
+}
+
+.artware-layer{
+  width: 350px;
+  height: 300px;
+  background-image: url('./Images/collaborativeArtware.png'); 
+  background-size: cover; 
+  background-position: center;
+  border-radius: 10px;
+}
+.capstone-layer{
+  width: 485px;
+  height: 350px;
+  background-image: linear-gradient(to right, rgba(0, 0, 255, 0.645), rgba(0, 128, 0, 0.667)), /* First linear gradient */
+  linear-gradient(to bottom, rgba(255, 0, 0, 0.652), rgba(255, 255, 0, 0.357)),
+   url('./Images/youngNicole.jpeg'); 
+  background-size: cover; 
+  background-position: right;
+  border-radius: 10px;
+}
+
+.inProgress-layer {
+  width: 400px;
+  height: 300px;
+  background-image: 
+      linear-gradient(to right, rgba(0, 0, 255, 0.645), rgba(0, 128, 0, 0.667)), /* First linear gradient */
+      linear-gradient(to bottom, rgba(255, 0, 0, 0.652), rgba(255, 255, 0, 0.357)), /* Second linear gradient */
+      url('./Images/chicagoView.jpeg'); /* Background image */
+  background-size: 20px 20px; 
+  border-radius: 10px;
+  /* rgb(236, 0, 146); */
+}
+
+
+/* -----------------------------------Buttons Animation------------------------------------------------------------- */
+button,
+button:after {
+  line-height: 78px;
+  font-size: 20px;
+  /* font-family: 'Bebas Neue', sans-serif; */
+  /* background: linear-gradient(45deg, transparent 5%, #FF013C 5%); */
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  text-align: center; 
+  border-radius: 10px;
+  background-image:  linear-gradient(45deg, rgba(174, 0, 255, 0.983), rgb(255, 106, 65));
+  border: 1px solid black;
+  z-index: 2;
+  /* box-shadow: 6px 0px 0px #00E6F6; */
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  /* --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0); */
+  --slice-5: inset(80% -6px 5% 0);
+    display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(75deg, transparent 3%, rgb(0, 0, 0), rgb(243, 243, 243));
+  text-shadow: -3px -3px 0px #05a3f8, 3px 3px 0px hsl(139, 35%, 12%);
+  clip-path: var(--slice-0);
+}
+
+.sequencers:after{
+    content: 'Musical Instruments';
+}
+.artware:after{
+    content: 'Art';
+}
+.music:after{
+    content: 'My Music';
+}
+.inProgress:after{
+    content: 'New Projects';
+}
+.videos:after{
+    content: 'Music Video Art';
+}
+.balloonTakeOff:after{
+  content:'Wellness';
+}
+
+button:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  15% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  button,
+  button:after {
+    width: 250px;
+    height: 150px;
+    line-height: 88px;
+  }
 }

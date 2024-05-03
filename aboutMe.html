@@ -2,81 +2,69 @@
 <html lang="en">
 <head>
     <title>About Me</title>
-    <link rel="stylesheet" href="homepage.css">
+    <!-- <link rel="stylesheet" href="homepage.css"> -->
     <link rel="stylesheet" type="text/css" href="aboutMeBasic.css">
     <link rel="stylesheet" type="text/css" href="navigationBar.css">
     <link rel="stylesheet" type="text/css" href="movingText.css">
 </head>
     <body>
-        <nav> 
-            <div class="navbar">
-            <label class= "logo"> <b>Nicole's Electronic ⚡️ Art</b> </label>
-                <ul>
+        <header>
+            <label class= "logo"> <b>Who is Nicole?</b> </label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav >      
+                <ul class="nav-list">
                     <li><a href="./index.html">Home</a></li>
                     <li><a class="active" href="#">About </a></li>
-                    <li><a href="./work.html">Work</a></li>
+                    <li class="list-item"><a href="./contact.html">Connect</a></li>
+                    <li class="list-item"><a href="./work.html">Work</a></li>
                 </ul>
-            </div>
-        </nav>
-        <section> 
-            <div class="banner">
-                <div class="blocks"></div>
-            </div>
-        </section>
-        <div class="profilePic">
-            <img src="Images/Moi.jpeg" class="Pictures">
-        </div>
-        <div class="container">
-            <p>
-                <pre>
-
-
-                </pre>
-            </p>
-            <span class="text first-text"> I'm </span>
-            <span class="text sec-text"></span>
-            <p>
-                <pre>
-
-                </pre>
-            </p>
-        </div>
-        <div class="aboutme">
-            <pre>
-
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
+    <div class="profilePic">
+        <img src="Images/cestMoi.jpeg" class="pictures">
+    </div>
+    <div class="container">
+        <span class="text first-text"> I'm </span>
+        <span class="text sec-text"></span> 
+    </div>
+    <div class="aboutme">
+        <div class="bio">
+            <p> 
+                    <span style="font-size:45pt">Hey there, </span>bienvenidos to my website! My name is Nicole Avila and 
+                    I'm a proud first-gen Mexican raised in Chapel Hill, North Carolina.
+                    I'm an aspiring artist interested in the interesection between music production and web development.
+                    I'm also very passionate about mental health and finding ways to encourage adolescents to become 
+                    more self-aware about their mental health.
                     
-            </pre>
-            <p class="paragraph"> 
-                    Hey there! Bienvenidos to my website! My name is Nicole Avila and I'm an aspiring <br>
-                    artist interested in the interesection between music production, computer science, and video making. <br>
-                    I'm also very passionate about mental health and finding ways to encourage adolescents to become <br>
-                    more self-aware about their mental health. Some of my hobbies include watching music videos, listening <br>
-                    to friend's spotify playlists, and coming up with some melodies. <br> <br> 
+                    I graduated from The University of Chicago double majoring in Computer Science and 
+                    Media Arts and Design with specializations in Human Computer Interaction and Electronic Music.
+                    Currently, I'm working at Fidelity as a Software Engineer!
+                    Some of my hobbies include watching music videos, listening 
+                    to friend's spotify playlists, and coming up with some melodies. 
                     
-                    I'm an undergraduate student at The University of Chicago double majoring in Computer Science and <br>
-                    Media Arts and Design. Currently, I'm a teaching assistant for Introduction to Computer Science I and am a maroon <br>
-                    mentor for first years that are first generation and low income. 
-                    <br><br>
-                    Want to chat? Email me at nicolerivera806@gmail.com!
             </p>
         </div>
+    </div>
 
-     <!-- Moving Text -->
-        <script>
-            const text = document.querySelector(".sec-text");
-            const self_descriptor = ["a creator", "an artist", "a dreamer", "a programmer", "music fanatic", " crazy.bird.lover"];
-            
-            const textLoad = () => {
-                for(let i  = 0; i < self_descriptor.length; i++){
-                    console.log(i)
-                    setTimeout(() => {
-                        text.textContent = self_descriptor[i];
-                        
-                    }, i * 4000);
-                }
+        <!-- Moving Text -->
+    <script>
+        const text = document.querySelector(".sec-text");
+        const self_descriptor = ["a creator", "an artist", "a dreamer", "a programmer", "music fanatic", "bird lover 🦜"];
+        
+        const textLoad = () => {
+            for(let i  = 0; i < self_descriptor.length; i++){
+                console.log(i)
+                setTimeout(() => {
+                    text.textContent = self_descriptor[i];
+                    
+                }, i * 4000);
             }
-            textLoad();
-            setInterval(textLoad, 12000);
-        </script>
+        }
+        textLoad();
+        setInterval(textLoad, 12000);
+    </script>
     </body>
 </html>

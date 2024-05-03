@@ -4,36 +4,42 @@
         <meta charset=" UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="homepage.css">
         <link rel="stylesheet" href="navigationBar.css">
+
+        <link rel="stylesheet" href="homepage.css">
         <!-- import the latest version of hydra synth -->
         <script src="https://unpkg.com/hydra-synth"></script>
         <script src="./script.js" defer></script>
+        <!-- <script src="./navbar.js"></script> -->
     </head>
     <body>
-        <nav> 
-            <div class="navbar">
-            <label class= "logo"> <b>Nicole's Electronic ⚡️ Art</b> </label>
-                <ul>
-                    
-                    <li><a class="active" href="#">Home</a></li>
-                    <li><a href="./aboutMe.html">About </a></li>
-                    <li><a href="./work.html">Work</a></li>
+        <header>
+            <label class= "logo"> <b>_____Nicole Avila_____</b> </label>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav >      
+                <ul class="nav-list">
+                    <li class="list-item"><a class="active" href="#">Home</a></li>
+                    <li class="list-item"><a href="./aboutMe.html">About </a></li>
+                    <li class="list-item"><a href="./contact.html">Connect</a></li>
+                    <li class="list-item"><a href="./work.html">Work</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
         <div class="stars"></div>
         <div class="twinkling"></div> 
         <div class="clouds"></div>
-        <div class="Home"></div>
-        <canvas id="myCanvas" width="400px" height="400px"></canvas>
-            <div class="HomepageAudio"> 
-                <!-- <audio autoplay loop> -->
-                <audio src="portfolioMusic.wav" loop="true"></audio>
-                <!-- <source src="portfolioMusic.wav"  type="audio/wav" loop="true"></audio> -->
-            </div>
+        <div class="container">
             <button class="button" id="myBtn">Click For Sound</button>
-        <!-- <img id="sinCity.jpeg" src="/Users/nicoleavila-rivera/Desktop/portfolio/ElektricArt-Portfolio/testing/Images/sinCity.jpeg">
-        <img id="JapanInChicago.jpeg" src="/Users/nicoleavila-rivera/Desktop/portfolio/ElektricArt-Portfolio/testing/Images/JapanInChicago.jpeg"> -->
+            <canvas id="myCanvas" width="400px" height="400px"></canvas>
+                <div class="HomepageAudio"> 
+                    <!-- <audio autoplay loop> -->
+                    <audio src="portfolioMusic.wav" loop="true"></audio>
+                    <!-- <source src="portfolioMusic.wav"  type="audio/wav" loop="true"></audio> -->
+                </div>
+                
+        </div>
     </body>
 </html>

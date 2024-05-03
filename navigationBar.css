@@ -1,47 +1,205 @@
+/* *, *::before, *::after {
+  box-sizing: border-box;
+} */
 
-/* Navigation Bar Style Code */
-nav{
-    background: transparent;
-    height: 80px;
-    width: 100%;
-    z-index: 10;
-    display:block;
+body {
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+  
+.logo {
+  display: inline-block;
+  font-size: 45px;
+  font-style: italic;
+  line-height: 80px;
+  padding: 0 100px;
+  color: rgb(255, 255, 255);
+  text-shadow:
+    /* White glow */
+    0 0 7px #fff,
+    0 0 10px #fff, 
+    /* Yellow glow */
+    0 0 42px #fff,
+    0 0 82px #fffbd7,
+    0 0 92px #f2d7ff,
+    0 0 102px #caeccf;
+}
+header {
+  background: black;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 100px;
+
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: black;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Makes hamburger bar */
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 3;
+  }
+  
+  nav {
+
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
     position: relative;
   }
   
-  label.logo {
-    color: pink;
-    font-size: 45px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+  nav a::before {
+    content: '';
+    display: block;
+    height: 10px;
+    background: rgb(232, 32, 1);
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  
+  nav a:hover::before {
+    transform: scale(1,1);
   }
 
-  nav ul {
-    float: right;
-    margin-right: 20px;
-  }
-
-  nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a {
-    color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
+  nav a:active {
+    transform: scale(1,1);
   }
 
   a.active, a:hover {
-    background-color: rgb(109, 94, 94);
-    transition: .5s;
-    
-  }
+    text-decoration: underline overline #ffffff;
 
-  /* Images */
-  img {
-    display: inline-block;
   }
+}
+
+/* Uses a pseudoclass called checked to check  */
+/* .nav-toggle: checked ~ nav{
+  display: block;
+} */

@@ -1,0 +1,70 @@
+body {
+    background: black;
+    font-family: 'Lato', sans-serif;
+}
+.contact-container{
+    display: flex;
+    position: relative; /* Add this line to make positioning relative */
+    top: 150px; /* Adjust this value to reposition vertically */
+    margin: auto;
+    width: 85%;
+    background-color: transparent;
+    border-style: solid; 
+    border-width: 75px;
+    border-color:  rgb(212, 46, 198) transparent;
+    /* background: linear-gradient(#e66465, #9198e5); */
+    border-radius: 4px;
+    height: 675px;
+}
+
+.contactInfo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 25px;
+    top: 500px;
+    gap: 50px;
+
+}
+
+.linkedIn, .gmail{
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+    width: 100px;
+    border-radius: 30px;
+    height: 75px;
+}
+
+.nicolePicture {
+    border-radius: 25%;
+    padding: 20px;
+    width: 50%;
+    height: 60%;
+}
+  
+.cestMoi{
+    width: 60%;
+    display: flex;
+    position: absolute;
+    top: 6px;
+    flex-direction: row;
+    padding-top: 25px;
+}
+
+p{
+    color: white;
+    font-size: 30px;
+    line-height: 2;
+    font-family: 'Lato', sans-serif;
+    padding: 35px;
+}
+
+h1 {
+    padding: 50px;
+    color: white;
+}
+
+h2 {
+    padding: 150px;
+}

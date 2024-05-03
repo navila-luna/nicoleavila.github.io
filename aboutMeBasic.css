@@ -7,15 +7,7 @@
 body {
     background: black;
 }
-section {
-    position: relative;
-    text-align: center;
-    /* width: 100%;
-    height: 100vh; */
-    transform-style: preserve-3d;
-    perspective: 100px;
-}
-section h2 {
+h2 {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -28,34 +20,47 @@ section h2 {
 h3 {
     position: relative;
     color: white;
-
     font-size: 10vw;
     display: block;
     z-index: 3;
     text-align: center;
+}
+p {
+    font-size: 30px;
+    line-height: 2;
+    font-family: 'Lato', sans-serif;
+    padding: 35px;
 }
 .aboutme {
     color: white;
     display:block;
     position: relative;
     z-index: 3;
+    margin: 0 auto;
+    text-align: left;
+}
+.pictures {
+    border-radius: 70%;
+    z-index: 2;
+    padding: 50px;
+    width: 40%;
+    height: 50%;
+}
+  
+.profilePic{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 50px;
+    margin-top: 10px;
+}
+.email {
     text-align: center;
-    border-width:2px;
-    border-style:solid;
-    border-color: white;
-}
-.Pictures {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 4;
-    width: 55%;
-    height: auto;
-
-}
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border-width: 2px;
+    /* border-style: solid; */
     width: 50%;
-  }
+    z-index: 4;
+    position: absolute;
+    top: 1050px;
+}

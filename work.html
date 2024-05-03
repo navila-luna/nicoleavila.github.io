@@ -2,57 +2,67 @@
 <html lang="en">
 <head>
     <title>Work</title>
-    <link rel="stylesheet" href="homepage.css">
     <link rel="stylesheet" type="text/css" href="navigationBar.css">
     <link rel="stylesheet" type="text/css" href="work.css">
 </head>
 <body>
-    <nav> 
-        <div class="navbar">
+    <header>
         <label class= "logo"> <b>Nicole's Electronic ⚡️ Art</b> </label>
-            <ul>
-                <li><a  href="./index.html">Home</a></li>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav >      
+            <ul class="nav-list">
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./aboutMe.html">About </a></li>
+                <li class="list-item"><a href="./contact.html">Connect</a></li>
                 <li><a class="active" href="#">Work</a></li>
             </ul>
-        </div>
-    </nav>
-    <div class="stars"></div>
-    <div class="twinkling"></div> 
-    <div class="clouds"></div>
-    <div class="content">
-        <div class="row">
-            <div class="column">
-                <div class="audio1">
-                    <audio controls>
-                        <source src="Videos/Mi Primer Reggaetton.wav" type="audio/wav">
-                    </audio>
-                    <h3>Reggaetton Beat Song</h3>
-                    <p> 
-                        Made using Reaper, Max, and some sampled sounds from internet. 
-                    </p>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="projects">
+            <a href="./sequencers.html">
+                <div class="box-container">
+                    <div class="sequencers-layer ">
+                        <button class="sequencers">Sequencers</button>
+                    </div>
                 </div>
+            </a>
+            <div class="box-container">
+                <a href="./collaborativeArtware.html">
+                    <div class="artware-layer collaborativePage">
+                        <button class="artware">Collaborative Artware</button>
+                    </div>
+                </a>
             </div>
-            <div class="column">
-                <div class="audio2">
-                    <video width="100%" controls>
-                        <source src="Videos/LivePerformanceSynthesis.mp4" type="video/mp4">
-                    </video>
-                    <h3>Live Performance of Granular Synthesis with Additive Synthesis</h3>
-                    <p> 
-                        Made using Max
-                    </p>
+            <div class="box-container">
+                <div class="video-layer">
+                    <button class="videos">Moving Art</button>
                 </div>
+
             </div>
-            <div class="column">
-                <div class="netart1">
-                    <img src="Images/collaborativeArtware.png" class="Pictures">
-                    <h3> Netizens Collaborative WhiteBoard:To Draw & Listen to Music</h3>
-                    <p>
-                        Class project created using HTML, CSS, & Javascript.
-                        
-                    </p>
-                </div>
+            <div class="box-container">
+                <a href="./music.html">
+                    <div class="music-layer">
+                        <button class="music">Music</button>
+                    </div>
+                </a>
+            </div>
+            <div class="box-container">
+                <a href="./balloonTakeOff.html">
+                    <div class="capstone-layer">
+                        <button class="balloonTakeOff">Balloon Take Off</button>
+                    </div>
+                </a>
+            </div>
+            <div class="box-container">
+                <a href="./inProgress.html">
+                    <div class="inProgress-layer">
+                        <button class="inProgress">Ideas in Progress...</button>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

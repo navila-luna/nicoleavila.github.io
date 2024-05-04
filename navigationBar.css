@@ -7,7 +7,11 @@ body {
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
 }
-  
+@media (300px <= width <= 50em) {
+  .logo{
+    flex-wrap: wrap;
+  }
+}
 .logo {
   display: inline-block;
   font-size: 45px;
@@ -125,7 +129,7 @@ nav a {
   top: 7px;
 }
 
-@media screen and (min-width: 1090px) {
+@media screen and (min-width: 1205px) {
   .nav-toggle-label {
     display: none;
   }
@@ -140,7 +144,6 @@ nav a {
   }
   
   nav {
-
     /* the following lines are not from my video, but add Edge support */
     position: relative;
     text-align: left;
@@ -150,7 +153,6 @@ nav a {
     top: initial;
     left: initial;
     /* end Edge support stuff */
-    
     grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;

@@ -15,7 +15,6 @@
                 <ul class="nav-list">
                     <li><a href="./index.html">Home</a></li>
                     <li><a class="active" href="#">About </a></li>
-                    <li class="list-item"><a href="./contact.html">Connect</a></li>
                     <li class="list-item"><a href="./work.html">Work</a></li>
                 </ul>
             </nav>
@@ -31,6 +30,7 @@
         <span class="text sec-text"></span> 
     </div>
     <div class="aboutme">
+        <div  class="outer-box">
         <div class="text-container">
             <p> 
                     <span style="font-size:45pt">Hey there, </span>bienvenidos to my website! My name is Nicole Avila and 
@@ -45,10 +45,24 @@
                     Currently, I'm working at Fidelity Investments as a software engineer!
                     Some of my hobbies include watching music videos, singing, and coming up with some melodies.         
             </p>
-        </div>
+            <p> Feel free to connect with me through gmail or LinkedIn! 
+                I am always down to have a chat either in person or through zoom!
+            </p>            
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/nicole-avila-b3a9a31b1/">
+                    <img src="Images/linkedInLogo.png" class="linkedIn">
+                </a>
+                <a href="mailto:nicolerivera806@gmail.com">
+                    <img src="Images/gmailLogo.png" class="gmail">
+                </a>
+                <a href="https://github.com/navila-luna">
+                    <img src="Images/githubLogo.jpeg" class="github">
+                </a>
+            </div>
     </div>
 
         <!-- Moving Text -->
+    <div>
     <script>
         const text = document.querySelector(".sec-text");
         const self_descriptor = ["a creator", "an artist", "a dreamer", "a programmer", "music fanatic", "bird lover 🦜"];
@@ -65,5 +79,6 @@
         textLoad();
         setInterval(textLoad, 12000);
     </script>
+</div>
     </body>
 </html>

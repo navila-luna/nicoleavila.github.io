@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap');
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.homeBackground{
+.homeBackground {
     /* min-height: 50vh; */
     display: flex;
     align-items: center;
@@ -13,26 +13,24 @@
     background: black;
     overflow: hidden;
 }
-.container{
-        /* Make sure text is infront of background images */
-        display:block;
-        position: relative;
-        z-index: 3;
-        text-align: center;
-        font-family: 'Lato', sans-serif;
-        /* font-size: 50px; */
+.container {
+    display:block;
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
 }
-.container .text{
+.container .text {
     position: relative;
     color: blueviolet;
     font-size: 70px;
     font-weight: 600;
 }
-.container .text.first-text{
+.container .text.first-text {
     color: white;
     text-align: right;
 }
-.text.sec-text:before{
+.text.sec-text:before {
     content: "";
     position: absolute;
     top: 0;
@@ -43,7 +41,7 @@
     border-left: 2px solid blueviolet;
     animation: animate 4s steps(12) infinite;
 }
-@keyframes animate{
+@keyframes animate {
     40%, 60%{
         left: 100%;
     }

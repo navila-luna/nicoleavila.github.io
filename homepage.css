@@ -54,23 +54,26 @@
 }
 
 .clouds{
-    background:transparent url(Images/clouds.png) repeat top center;
-    z-index:2;
-    opacity: .4;
-    animation:move-clouds-back 200s linear infinite;
+  background:transparent url(Images/clouds.png) repeat top center;
+  z-index:2;
+  opacity: .4;
+  animation:move-clouds-back 200s linear infinite;
 }
-.container{
+
+.container {
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+  padding-top: 150px;
   gap: 100px;
 }
+
 @media (300px <= width <= 50em) {
   .container{
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* padding-top: 0px; */
+    padding-top: 0px;
     width: 80vw;
     margin: 0 auto;
     min-height: 100vh;

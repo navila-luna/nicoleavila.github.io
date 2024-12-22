@@ -1,20 +1,24 @@
-/* *, *::before, *::after {
-  box-sizing: border-box;
-} */
-
 body {
 	margin: 0;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 400;
 }
-@media (300px <= width <= 50em) {
-  .logo{
-    flex-wrap: wrap;
-  }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-headers {
+  display: flex;
+  justify-content: center;
+  /* margin-left: 450px; */
 }
 .logo {
   display: inline-block;
-  font-size: 45px;
+  white-space: nowrap;
+  /* font-size: 45px; */
+  text-align: center;
   font-style: italic;
   line-height: 80px;
   padding: 0 100px;
@@ -29,38 +33,45 @@ body {
     0 0 92px #f2d7ff,
     0 0 102px #caeccf;
 }
+
 header {
-  background: black;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  height: 100px;
-  margin-bottom: 100px;
-  padding-bottom: 2px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
   background: black;
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
   list-style: none;
+  margin: 0;
+  padding: 10px 350px;
 }
 
 nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
+  margin: 0;
 }
 
 nav a {
@@ -81,7 +92,6 @@ nav a {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-
 .nav-toggle {
   position: absolute !important;
   top: -9999px !important;
@@ -90,7 +100,6 @@ nav a {
 
 .nav-toggle:focus ~ .nav-toggle-label {
   outline: 3px solid rgba(lightblue, .75);
-  
 }
 
 .nav-toggle-label {
@@ -103,8 +112,6 @@ nav a {
   align-items: center;
 }
 
-
-/* Makes hamburger bar */
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -115,7 +122,6 @@ nav a {
   border-radius: 2px;
   position: relative;
 }
-
 
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -131,7 +137,37 @@ nav a {
   top: 7px;
 }
 
-@media screen and (min-width: 1205px) {
+.nav-toggle:checked ~ nav a {
+  padding: 2px;
+}
+.nav-toggle:checked ~ nav a:hover {
+  border-style: groove;
+  border-color: white;
+  border-radius: 8px;
+  padding: 4px;
+}
+.nav-toggle:checked ~ nav a:active {
+  border-style: groove;
+  border-color: white;
+  border-radius: 8px;
+  transform: scale(1,1);
+}
+
+@media screen and (min-width: 950px) {
+  .logo b {
+    font-size: 3vw;
+    width: 100px;
+    white-space: nowrap; 
+    display: inline-block;
+  }
+}
+@media screen and (200px <= width <= 1000px){
+  .logo b {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
   .nav-toggle-label {
     display: none;
   }
@@ -141,12 +177,7 @@ nav a {
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
   
-  .logo {
-    grid-column: 2 / 3;
-  }
-  
   nav {
-    /* the following lines are not from my video, but add Edge support */
     position: relative;
     text-align: left;
     transition: none;
@@ -154,8 +185,6 @@ nav a {
     background: none;
     top: initial;
     left: initial;
-    /* end Edge support stuff */
-    grid-column: 3 / 4;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -196,20 +225,4 @@ nav a {
   a.active, a:hover {
     text-decoration: underline overline #ffffff;
   }
-
-}
-.nav-toggle:checked ~ nav a {
-  padding: 2px;
-}
-.nav-toggle:checked ~ nav a:hover {
-  border-style: groove;
-  border-color: white;
-  border-radius: 8px;
-  padding: 4px;
-}
-.nav-toggle:checked ~ nav a:active {
-  border-style: groove;
-  border-color: white;
-  border-radius: 8px;
-  transform: scale(1,1);
 }

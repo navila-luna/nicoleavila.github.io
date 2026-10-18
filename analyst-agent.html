@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Analyst Agent case study by Nicole Avila: RAG retrieval, MCP integration, orchestration, and benchmark testing.">
+  <title>Analyst Agent — Nicole Avila</title>
+  <link rel="stylesheet" href="navigationBar.css"><link rel="stylesheet" href="case-study.css">
+</head>
+<body class="case-page">
+  <header>
+    <a class="logo" href="./index.html" aria-label="Nicole Avila, home"><b>Nicole Avila</b></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="./index.html">Home</a></li><li><a href="./aboutMe.html">About</a></li><li><a class="active" href="./work.html">Work</a></li><li><a href="./music.html">Music</a></li></ul></nav>
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"><span></span></label>
+  </header>
+  <main>
+    <a class="case-back" href="./work.html#ai-engineering">← Back to selected work</a>
+    <section class="case-hero">
+      <p class="case-kicker">Human-centered AI · RAG · orchestration</p>
+      <h1>Analyst Agent</h1>
+      <p class="case-deck">A document question-answering system that grew from learning RAG and MCP into an investigation of retrieval, orchestration, model choice, and AI decision-making.</p>
+      <div class="case-facts">
+        <div class="case-fact"><p class="fact-label">Status</p><p>MVP 1 complete</p></div>
+        <div class="case-fact"><p class="fact-label">Current evidence</p><p>Benchmark testing performed</p></div>
+        <div class="case-fact"><p class="fact-label">Next milestone</p><p>UI and demo presentation</p></div>
+      </div>
+    </section>
+    <div class="case-layout">
+      <aside class="case-toc" aria-label="Case study contents"><p>On this page</p><ol>
+        <li><a href="#overview">Overview</a></li><li><a href="#motivation">Motivation &amp; problem</a></li><li><a href="#question">Research question</a></li><li><a href="#contributions">My contributions</a></li><li><a href="#process">Process</a></li><li><a href="#methods">Methods</a></li><li><a href="#results">Results &amp; evidence</a></li><li><a href="#reflections">Challenges &amp; reflections</a></li><li><a href="#next">Next steps</a></li><li><a href="#media">Media &amp; links</a></li>
+      </ol></aside>
+      <article class="case-content">
+        <section class="case-section" id="overview"><p class="case-section-label">01 · Overview</p><h2>From retrieval pipeline to agent behavior</h2><p>Analyst Agent is a completed first MVP for asking questions of documents. It combines RAG retrieval, MCP integration, read-only retrieval tools, and agent orchestration that determines when to search and when to answer.</p><p>The next portfolio milestone is not to rebuild the application, but to make its system behavior, evaluation, and design decisions easier to inspect.</p></section>
+        <section class="case-section" id="motivation"><p class="case-section-label">02 · Motivation and problem</p><h2>Learning the system by building the system</h2><p>The project began as a way to learn retrieval-augmented generation and MCP. As the MVP developed, the focus expanded: retrieval quality is only one part of a useful agent. The choices an agent makes—whether to search, what context to use, and when to answer—also shape the experience.</p></section>
+        <section class="case-section" id="question"><p class="case-section-label">03 · Research or design question</p><h2>What makes a document agent reliable?</h2><p class="question">How do retrieval configuration, model choice, and orchestration strategy affect an agent’s ability to find evidence and decide when it is ready to answer?</p></section>
+        <section class="case-section" id="contributions"><p class="case-section-label">04 · My contributions</p><h2>System design and evaluation</h2><ul><li>Implemented the RAG-based retrieval flow.</li><li>Developed MCP integration and read-only retrieval tools.</li><li>Built agent orchestration around SEARCH and ANSWER decisions.</li><li>Performed benchmark testing of the MVP.</li></ul><div class="placeholder"><p class="placeholder-title">Documentation needed</p><p>Add role, timeline, collaborators, repository link, and the specific stack used.</p></div></section>
+        <section class="case-section" id="process"><p class="case-section-label">05 · Design and development process</p><h2>An iterative technical investigation</h2><div class="process-grid"><div class="process-card"><span>01</span><h3>Learn</h3><p>Use a working question-answering system to understand RAG and MCP in practice.</p></div><div class="process-card"><span>02</span><h3>Integrate</h3><p>Connect retrieval tools and define the boundaries of read-only access.</p></div><div class="process-card"><span>03</span><h3>Orchestrate</h3><p>Develop the decision flow between searching for context and composing an answer.</p></div><div class="process-card"><span>04</span><h3>Evaluate</h3><p>Run benchmark testing, then identify the next questions to investigate.</p></div></div></section>
+        <section class="case-section" id="methods"><p class="case-section-label">06 · Implementation or research methods</p><h2>Retrieval, tools, and decisions</h2><p>The implemented MVP includes document retrieval, MCP-based tool integration, and orchestration logic for SEARCH/ANSWER decisions. Benchmark testing has been completed.</p><div class="placeholder"><p class="placeholder-title">Architecture detail needed</p><p>Add the ingestion path, retrieval configuration, model names, orchestration logic, evaluation dataset, and benchmark protocol.</p></div></section>
+        <section class="case-section" id="results"><p class="case-section-label">07 · Results and evidence</p><h2>A completed MVP with an evaluation baseline</h2><div class="evidence-note"><p><strong>Verified current result:</strong> MVP 1 is complete and benchmark testing has been performed. Specific scores or improvement claims are intentionally omitted until the benchmark output and methodology are added.</p></div><div class="placeholder"><p class="placeholder-title">Benchmark results placeholder</p><p>Add metrics, test set composition, baseline comparisons, limitations, and representative success/failure examples.</p></div></section>
+        <section class="case-section" id="reflections"><p class="case-section-label">08 · Challenges and reflections</p><h2>Evaluation changes the questions</h2><p>The project’s evolution suggests that agent quality cannot be reduced to whether retrieval exists. Orchestration and model behavior create additional design choices worth making visible and testable.</p><div class="placeholder"><p class="placeholder-title">Reflection prompt</p><p>What failure mode surprised you most? Which design choice changed after testing? What did the benchmark not measure?</p></div></section>
+        <section class="case-section" id="next"><p class="case-section-label">09 · Next steps</p><h2>Make the work legible, then deepen the research</h2><ul><li>Improve the UI and prepare a clear end-to-end demonstration.</li><li>Document the architecture and benchmark methodology.</li><li>Explore comparisons across language models, retrieval configurations, and orchestration strategies.</li></ul><p>These comparisons are future research directions, not completed findings.</p></section>
+        <section class="case-section" id="media"><p class="case-section-label">10 · Media gallery and relevant links</p><h2>Evidence to add</h2><div class="media-grid"><div class="media-placeholder">Architecture diagram<br>placeholder</div><div class="media-placeholder">Benchmark results<br>placeholder</div><div class="media-placeholder">Product UI screenshot<br>placeholder</div><div class="media-placeholder">Demo video<br>placeholder</div></div><div class="placeholder"><p class="placeholder-title">Links needed</p><p>Add a repository, live demo, technical write-up, or other shareable project links.</p></div></section>
+      </article>
+    </div>
+    <footer class="case-footer"><span>Analyst Agent · Case study in progress</span><a href="./focusflow.html">Next: FocusFlow →</a></footer>
+  </main>
+</body>
+</html>

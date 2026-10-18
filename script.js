@@ -8,8 +8,19 @@ gradient(4,0.1,2).invert().luma().modulatePixelate(noise(25,0.5),100).invert()
 .layer(osc(4,0.1,2).luma().mask(shape(2,0.5).scrollY(-0.25))).out(o0)
 
 const element = document.getElementById("myBtn");
+const track = document.querySelector("audio");
+
 element.addEventListener("click", function() {
-    const track = document.querySelector('audio');
-    track.play();
-    console.log("clicked");
-  });
+  if (track.paused) {
+    track.play().then(function() {
+      element.textContent = "Pause Sound";
+      element.setAttribute("aria-pressed", "true");
+    }).catch(function() {
+      element.textContent = "Sound unavailable";
+    });
+  } else {
+    track.pause();
+    element.textContent = "Play Sound";
+    element.setAttribute("aria-pressed", "false");
+  }
+});

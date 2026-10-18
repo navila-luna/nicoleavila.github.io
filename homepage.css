@@ -73,26 +73,25 @@
   .container{
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: 0px;
+    padding-top: 100px;
     width: 80vw;
     margin: 0 auto;
     min-height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 24px;
   }
   #myCanvas {
     flex-wrap: wrap;
     width: 200px;
     height: 200px;
-    margin-right: 2px;
-    padding-bottom: 15px;
-    padding-right: 2500px;
+    margin: 0;
+    padding: 0;
 
   }
   .container .button {
-    position: absolute;
-    margin-left: 100px;
-    margin-top: 475px;
-    z-index: 2px;
+    position: relative;
+    margin: 0;
+    z-index: 3;
   }
 }
 
@@ -136,4 +135,15 @@
   background-color: #365d60;
   box-shadow: 0 10px rgb(82, 113, 135);
   transform: translateY(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .twinkling, .clouds { animation: none; }
+  .button { transition: none; }
+}
+
+@media (max-width: 50em) {
+  .container { padding-top: 100px; flex-direction: column; gap: 24px; }
+  #myCanvas { width: min(76vw, 360px); height: min(76vw, 360px); margin: 0; padding: 0; }
+  .container .button { position: relative; margin: 0; }
 }

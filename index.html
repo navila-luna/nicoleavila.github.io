@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head> 
-        <meta charset=" UTF-8">
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Nicole Avila is an engineer, researcher, and artist exploring human-centered technology, music, and creative expression.">
+        <title>Nicole Avila — Engineer, Researcher &amp; Artist</title>
         <link rel="stylesheet" href="navigationBar.css">
 
         <link rel="stylesheet" href="homepage.css">
@@ -15,16 +17,17 @@
     <body>
         <div class="flex-container">
             <header>
-              <label class="logo"><b>_____Nicole Avila_____</b></label>
+              <a class="logo" href="./index.html" aria-label="Nicole Avila, home"><b>_____Nicole Avila_____</b></a>
               <input type="checkbox" id="nav-toggle" class="nav-toggle">
-              <label for="nav-toggle" class="nav-toggle-label">
+              <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
                 <span></span>
               </label>
-              <nav>
+              <nav aria-label="Primary navigation">
                 <ul class="nav-list">
-                  <li class="list-item"><a class="active" href="#">Home</a></li>
+                  <li class="list-item"><a class="active" aria-current="page" href="./index.html">Home</a></li>
                   <li class="list-item"><a href="./aboutMe.html">About</a></li>
                   <li class="list-item"><a href="./work.html">Work</a></li>
+                  <li class="list-item"><a href="./music.html">Music</a></li>
                 </ul>
               </nav>
             </header>
@@ -33,13 +36,13 @@
         <div class="twinkling"></div> 
         <div class="clouds"></div>
         <div class="container">
-                <button class="button btn-sound" id="myBtn">Click For Sound</button>
+                <button class="button btn-sound" id="myBtn" type="button" aria-pressed="false">Play Sound</button>
             <div class="movingNoiseArt">
                 <canvas id="myCanvas"></canvas>
             </div>
                 <div class="HomepageAudio"> 
                     <!-- <audio autoplay loop> -->
-                    <audio src="portfolioMusic.wav" loop="true"></audio>
+                    <audio src="portfolioMusic.wav" loop preload="metadata"></audio>
                     <!-- <source src="portfolioMusic.wav"  type="audio/wav" loop="true"></audio> -->
                 </div>     
         </div>

@@ -36,9 +36,13 @@ body.case-page { margin: 0; color: var(--ink); background: #070709; font-family:
 .inline-link { color: var(--ink); text-decoration-color: var(--case-accent); text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .inline-link:hover, .inline-link:focus-visible { color: var(--case-accent); outline: none; }
 .case-section ul { padding-left: 20px; }
+.insight-list { padding-left: 22px; }
+.insight-list li + li { margin-top: 12px; }
 .question { max-width: 820px !important; padding-left: 28px; border-left: 2px solid var(--case-accent); color: var(--ink) !important; font-size: clamp(1.35rem, 2.5vw, 2rem) !important; line-height: 1.5 !important; }
 .process-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
 .process-grid-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tool-grid { margin-bottom: 34px; }
+.tool-grid code { color: var(--case-accent); font-size: .95em; }
 .process-card { padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
 .process-card span { color: var(--case-accent); font: 400 .7rem "DM Mono", monospace; }
 .process-card h3 { margin: 14px 0 8px; }.process-card p { margin: 0; font-size: .94rem; }
@@ -55,6 +59,10 @@ body.case-page { margin: 0; color: var(--ink); background: #070709; font-family:
 .media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
 .media-item { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
 .media-item img { display: block; width: 100%; height: auto; background: #0d0c10; }
+.diagram-item { margin: 20px 0 38px; }
+.diagram-link { display: block; background: #fff; }
+.diagram-link:focus-visible { outline: 3px solid var(--case-accent); outline-offset: 3px; }
+.diagram-item img { background: #fff; object-fit: contain; }
 .media-cover img { aspect-ratio: 16 / 10; object-fit: cover; }
 .media-contain img { aspect-ratio: 16 / 10; object-fit: contain; }
 .media-item figcaption { padding: 14px 16px 16px; color: var(--muted); font: 300 .72rem/1.55 "DM Mono", monospace; }

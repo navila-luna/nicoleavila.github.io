@@ -20,23 +20,80 @@
       <h1>Analyst Agent</h1>
       <p class="case-deck">A document question-answering system that grew from learning RAG and MCP into an investigation of retrieval, orchestration, model choice, and AI decision-making.</p>
       <div class="case-actions"><a class="case-button" href="https://github.com/navila-luna/Analyst-Agent" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a></div>
-      <div class="case-facts">
-        <div class="case-fact"><p class="fact-label">Status</p><p>MVP 1 complete</p></div>
-        <div class="case-fact"><p class="fact-label">Current evidence</p><p>Benchmark testing performed</p></div>
-        <div class="case-fact"><p class="fact-label">Next milestone</p><p>UI and demo presentation</p></div>
-      </div>
     </section>
     <div class="case-layout">
       <aside class="case-toc" aria-label="Case study contents"><p>On this page</p><ol>
-        <li><a href="#overview">Overview</a></li><li><a href="#question">Research question</a></li><li><a href="#methods">Methods</a></li><li><a href="#results">Results &amp; evidence</a></li><li><a href="#next">Next steps</a></li><li><a href="#media">Media &amp; links</a></li>
+        <li><a href="#overview">Overview</a></li><li><a href="#question">Research questions</a></li><li><a href="#methods">Methods</a></li><li><a href="#results">Emerging insight</a></li><li><a href="#architecture">Design insight</a></li><li><a href="#reflection">Reflection &amp; future direction</a></li><li><a href="#media">Media &amp; links</a></li>
       </ol></aside>
       <article class="case-content">
         <section class="case-section" id="overview"><p class="case-section-label">1 · Overview</p><h2>From retrieval pipeline to agent behavior</h2><p>An experimental AI document analysis system exploring retrieval-augmented generation, MCP-based tool integration, and agent orchestration. Built to investigate how AI agents retrieve evidence, make SEARCH/ANSWER decisions, and produce grounded responses, with ongoing evaluation of retrieval quality, model performance, and decision-making reliability.</p></section>
-        <section class="case-section" id="question"><p class="case-section-label">2 · Research question</p><h2>Locating the sources of retrieval accuracy</h2><p class="question">How do retrieval and system-design choices influence the relevance and completeness of evidence available to an AI agent?</p></section>
-        <section class="case-section" id="methods"><p class="case-section-label">3 · Implementation and research methods</p><h2>A retrieval pipeline with an agentic loop</h2><p>Analyst Agent began as a self-directed exploration of retrieval-augmented generation (RAG), Model Context Protocol (MCP), and AI agent orchestration.</p><p>For the first MVP, I developed a document question-answering system that combines semantic retrieval with an agentic SEARCH/ANSWER loop. The agent can access document retrieval through a read-only MCP tool and determine when additional information is needed before responding.</p><p>The system creates several variables to investigate: document chunking, embeddings, retrieval limits, search-query formulation, and the decision boundaries that determine when the agent searches or answers.</p></section>
-        <section class="case-section" id="results"><p class="case-section-label">4 · Results and evidence</p><h2>A preliminary evaluation of retrieval reliability</h2><p>Beyond implementing the architecture, I conducted preliminary benchmark testing to investigate the reliability of information retrieval and identify potential failure points across the pipeline.</p><div class="evidence-note"><p>Specific scores or improvement claims are intentionally omitted until the benchmark output, test set, and methodology are documented here.</p></div></section>
-        <section class="case-section" id="next"><p class="case-section-label">5 · Next steps</p><h2>Separate retrieval limits from agent decisions</h2><p>My next step is to isolate these variables through controlled evaluation, distinguishing limitations of the retrieval pipeline from those of the agent’s decision-making process.</p><p>The broader motivation is to understand how architectural decisions influence the reliability and controllability of AI systems.</p></section>
-        <section class="case-section" id="media"><p class="case-section-label">6 · Media gallery and relevant links</p><h2>Evidence to add</h2><div class="media-grid"><div class="media-placeholder">Architecture diagram<br>placeholder</div><div class="media-placeholder">Benchmark results<br>placeholder</div><div class="media-placeholder">Product UI screenshot<br>placeholder</div><div class="media-placeholder">Demo video<br>placeholder</div></div><div class="placeholder"><p class="placeholder-title">Project repository</p><p><a class="inline-link" href="https://github.com/navila-luna/Analyst-Agent" target="_blank" rel="noopener noreferrer">View Analyst Agent on GitHub ↗</a></p></div></section>
+        <section class="case-section" id="question">
+          <p class="case-section-label">2 · Research questions</p>
+          <h3>Primary question</h3>
+          <p class="question">How do retrieval strategies, document representation, and agent orchestration affect the relevance and completeness of evidence available to an AI agent?</p>
+          <p>I initially investigated how document chunking, embedding similarity, retrieval limits, and search decisions influenced the information retrieved by Analyst Agent. Although the system generally performed well with a small document collection, benchmarking revealed that relevant passages did not always provide sufficient context for more complex requests.</p>
+          <p>A factual lookup might be answered using a few semantically similar chunks, while a cross-document comparison or creative synthesis task requires broader coverage, explicit document selection, and integration of information across sources.</p>
+          <h3>Emerging question</h3>
+          <p class="question">How can we design agent-computer interfaces that enable AI agents to select appropriate information-access strategies based on the user’s task?</p>
+        </section>
+        <section class="case-section" id="methods">
+          <p class="case-section-label">3 · Implementation and research methods</p>
+          <h2>Expanding the interface beyond semantic search</h2>
+          <p>Analyst Agent began as a self-directed exploration of retrieval-augmented generation (RAG), Model Context Protocol (MCP), and AI agent orchestration. For the first MVP, I developed a document question-answering system that combines semantic retrieval with an agentic SEARCH/ANSWER loop.</p>
+          <h3>System architecture</h3>
+          <figure class="media-item diagram-item">
+            <a class="diagram-link" href="./Images/techStackAnalystAgent.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Analyst Agent system architecture diagram at full size"><img src="./Images/techStackAnalystAgent.png" alt="Analyst Agent system architecture connecting the React frontend, FastAPI, PostgreSQL, the Analyst Agent, MCP tools, the document repository, and ChromaDB" loading="lazy"></a>
+            <figcaption>System architecture connecting the application, agent, MCP tools, and document stores. Select the diagram to open it at full size.</figcaption>
+          </figure>
+          <p>To investigate the emerging question, I expanded the agent’s read-only MCP interface beyond semantic search to include document discovery and ordered reading. This gives the agent multiple ways to access information while preserving explicit execution and resource constraints.</p>
+          <div class="process-grid process-grid-three tool-grid">
+            <div class="process-card"><h3><code>list_documents</code></h3><p>Discover which documents are available before selecting sources.</p></div>
+            <div class="process-card"><h3>Semantic search</h3><p>Retrieve passages that are similar to a targeted query.</p></div>
+            <div class="process-card"><h3><code>read_document</code></h3><p>Retrieve ordered chunks for broader document coverage.</p></div>
+          </div>
+          <h3>Agent orchestration</h3>
+          <figure class="media-item diagram-item">
+            <a class="diagram-link" href="./Images/AgentOrchestration.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Analyst Agent orchestration diagram at full size"><img src="./Images/AgentOrchestration.png" alt="Agent orchestration organized around controls, reasoning, and capabilities" loading="lazy"></a>
+            <figcaption>Orchestration brings together controls, reasoning state, and the capabilities exposed to the agent.</figcaption>
+          </figure>
+          <h3>The agentic loop</h3>
+          <figure class="media-item diagram-item">
+            <a class="diagram-link" href="./Images/AgenticLoopAnalystAgent.png" target="_blank" rel="noopener noreferrer" aria-label="Open the Analyst Agent loop diagram at full size"><img src="./Images/AgenticLoopAnalystAgent.png" alt="Agentic loop showing how the system chooses an action, gathers information, returns an answer, or stops safely when a limit is reached" loading="lazy"></a>
+            <figcaption>The agent can search, list, or read when it needs more information, then add the observation to its state and choose its next action.</figcaption>
+          </figure>
+        </section>
+        <section class="case-section" id="results">
+          <p class="case-section-label">4 · Emerging insight</p>
+          <h2>Beyond similarity-based retrieval</h2>
+          <p>During preliminary benchmarking, I observed that Analyst Agent generally retrieved relevant information successfully from a small document collection. However, some requests exposed limitations that could not be resolved simply by improving similarity scores or increasing the number of retrieved chunks.</p>
+          <p>The original pipeline was built around an assumption: <strong>a user’s question can be answered using a small set of independently retrieved document chunks.</strong> While this approach is effective for targeted factual lookups, more complex requests may require a fundamentally different information-access strategy.</p>
+          <div class="evidence-note"><p><strong>Example request:</strong> <em>“Review these two case studies and generate three original discussion questions based on the arguments presented.”</em></p></div>
+          <p>This task requires capabilities beyond conventional top-k semantic retrieval:</p>
+          <ol class="insight-list">
+            <li><strong>Explicit document selection:</strong> Identify and use both requested documents rather than allowing semantic similarity to determine which sources are represented.</li>
+            <li><strong>Broad evidence coverage:</strong> Understand the major arguments and supporting points across both documents, not only passages that resemble the query.</li>
+            <li><strong>Cross-document synthesis:</strong> Identify connections, contrasts, and tensions between ideas presented in different sources.</li>
+            <li><strong>Creative generation:</strong> Produce an original interpretation or set of questions when appropriate. An overly restrictive evidence-grounding prompt could prevent legitimate synthesis.</li>
+            <li><strong>Coverage validation:</strong> Verify that the response meaningfully incorporates evidence from both documents instead of assuming that referencing them guarantees adequate coverage.</li>
+          </ol>
+          <p>Related challenges appear in document comparison, comprehensive information extraction, external research, and creative transformation—tasks that may require balanced source representation, completeness checks, source verification, or understanding a document as a whole.</p>
+        </section>
+        <section class="case-section" id="architecture">
+          <p class="case-section-label">5 · Design insight</p>
+          <h2>Applying HCI principles to agent interfaces</h2>
+          <p>Benchmarking showed that some limitations were not simply caused by retrieval accuracy or language-model performance. They reflected a mismatch between the tasks users wanted to accomplish and the capabilities available to the agent.</p>
+          <p>Reading about Agent-Computer Interaction (ACI) helped me recognize a connection to my background in Human-Computer Interaction (HCI). Both involve understanding the tasks an interface must support, identifying interaction failures, designing appropriate capabilities, and evaluating whether those capabilities enable successful task completion.</p>
+          <p>Just as human-facing interfaces must support what people want to accomplish, agent-facing interfaces must expose capabilities that allow AI systems to complete their assigned tasks reliably. Improving an AI system does not always require a more capable model; sometimes it requires redesigning the environment and interfaces through which the model operates.</p>
+          <p>This also raises a distinction between <strong>evidence-grounded reasoning</strong> and <strong>extractive answering</strong>. An AI system should not invent unsupported claims, but grounding does not mean restricting every response to information explicitly written in the source. Synthesis and creative interpretation can produce original outputs while remaining faithful to the underlying evidence.</p>
+        </section>
+        <section class="case-section" id="reflection">
+          <p class="case-section-label">6 · Reflection and future direction</p>
+          <h2>The question shifted from retrieval quality to sufficient evidence</h2>
+          <p>My initial interest was understanding how RAG, MCP, and agent orchestration work together. Benchmarking revealed that the more consequential challenge was determining whether the system had retrieved sufficient and appropriate information for the user’s actual goal.</p>
+          <p>The expanded architecture is implemented. The next step is comparative evaluation: testing whether the additional tools improve evidence relevance and completeness across factual lookup, summarization, comparison, and synthesis tasks.</p>
+          <div class="evidence-note"><p><strong>Current boundary:</strong> Document discovery and ordered reading are implemented alongside semantic search. Their comparative effectiveness—and the agent’s ability to select among them reliably—remains an area for further investigation.</p></div>
+        </section>
+        <section class="case-section" id="media"><p class="case-section-label">7 · Media gallery and relevant links</p><h2>Evidence to add</h2><div class="media-grid"><div class="media-placeholder">Benchmark results<br>placeholder</div><div class="media-placeholder">Product UI screenshot<br>placeholder</div><div class="media-placeholder">Demo video<br>placeholder</div></div></section>
       </article>
     </div>
     <footer class="case-footer"><span>Analyst Agent · Case study in progress</span><a href="./focusflow.html">Next: FocusFlow →</a></footer>

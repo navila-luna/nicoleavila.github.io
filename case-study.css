@@ -59,6 +59,8 @@ body.case-page { margin: 0; color: var(--ink); background: #070709; font-family:
 .media-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
 .media-item { margin: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--panel); }
 .media-item img { display: block; width: 100%; height: auto; background: #0d0c10; }
+.media-item-wide { grid-column: 1 / -1; }
+.analyst-demo-item figcaption strong { color: var(--ink); }
 .diagram-item { margin: 20px 0 38px; }
 .diagram-link { display: block; background: #fff; }
 .diagram-link:focus-visible { outline: 3px solid var(--case-accent); outline-offset: 3px; }

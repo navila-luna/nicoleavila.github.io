@@ -23,7 +23,7 @@
     </section>
     <div class="case-layout">
       <aside class="case-toc" aria-label="Case study contents"><p>On this page</p><ol>
-        <li><a href="#overview">Overview</a></li><li><a href="#question">Research questions</a></li><li><a href="#methods">Methods</a></li><li><a href="#results">Emerging insight</a></li><li><a href="#architecture">Design insight</a></li><li><a href="#reflection">Reflection &amp; future direction</a></li><li><a href="#media">Media &amp; links</a></li>
+        <li><a href="#overview">Overview</a></li><li><a href="#question">Research questions</a></li><li><a href="#methods">Methods</a></li><li><a href="#results">Emerging insight</a></li><li><a href="#architecture">Design insight</a></li><li><a href="#reflection">Reflection &amp; future direction</a></li><li><a href="#media">Demos</a></li>
       </ol></aside>
       <article class="case-content">
         <section class="case-section" id="overview"><p class="case-section-label">1 · Overview</p><h2>From retrieval pipeline to agent behavior</h2><p>An experimental AI document analysis system exploring retrieval-augmented generation, MCP-based tool integration, and agent orchestration. Built to investigate how AI agents retrieve evidence, make SEARCH/ANSWER decisions, and produce grounded responses, with ongoing evaluation of retrieval quality, model performance, and decision-making reliability.</p></section>
@@ -93,7 +93,25 @@
           <p>The expanded architecture is implemented. The next step is comparative evaluation: testing whether the additional tools improve evidence relevance and completeness across factual lookup, summarization, comparison, and synthesis tasks.</p>
           <div class="evidence-note"><p><strong>Current boundary:</strong> Document discovery and ordered reading are implemented alongside semantic search. Their comparative effectiveness—and the agent’s ability to select among them reliably—remains an area for further investigation.</p></div>
         </section>
-        <section class="case-section" id="media"><p class="case-section-label">7 · Media gallery and relevant links</p><h2>Evidence to add</h2><div class="media-grid"><div class="media-placeholder">Benchmark results<br>placeholder</div><div class="media-placeholder">Product UI screenshot<br>placeholder</div><div class="media-placeholder">Demo video<br>placeholder</div></div></section>
+        <section class="case-section" id="media">
+          <p class="case-section-label">7 · Demos</p>
+          <h2>Three request patterns</h2>
+          <p>These recordings show how Analyst Agent handles a direct document question, a question that requires additional searching to gather enough context, and a request that reads across multiple sources before generating new material grounded in those documents.</p>
+          <div class="media-grid analyst-demo-grid">
+            <figure class="media-item analyst-demo-item">
+              <img src="./Gifs/DirectDocumentQuesiton.gif" alt="Analyst Agent answering a direct question using information retrieved from an uploaded document" loading="lazy">
+              <figcaption><strong>Direct document question.</strong> The agent retrieves the relevant evidence and answers a targeted question.</figcaption>
+            </figure>
+            <figure class="media-item analyst-demo-item">
+              <img src="./Gifs/ComplexQuestion.gif" alt="Analyst Agent performing additional searches to gather enough context for a more complex question" loading="lazy">
+              <figcaption><strong>Iterative evidence gathering.</strong> The agent continues searching when the initial evidence is not sufficient to answer the request.</figcaption>
+            </figure>
+            <figure class="media-item analyst-demo-item media-item-wide">
+              <img src="./Gifs/MoreCreativeQuestion.gif" alt="Analyst Agent reading onboarding and deployment documents to create three original scenario-based quiz questions grounded in both sources" loading="lazy">
+              <figcaption><strong>Multi-document grounded generation.</strong> The agent reads the onboarding and deployment documents, then creates original scenario-based quiz questions grounded in facts from both sources.</figcaption>
+            </figure>
+          </div>
+        </section>
       </article>
     </div>
     <footer class="case-footer"><span>Analyst Agent · Case study in progress</span><a href="./focusflow.html">Next: FocusFlow →</a></footer>

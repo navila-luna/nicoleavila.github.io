@@ -1,90 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <meta charset=" UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="navigationBar.css">
-        <link rel="stylesheet" type="text/css" href="collaborativeArtware.css">
-    </head>
-    
-        <header>
-            <label class= "logo"> <b>_____Nicole Avila_____</b> </label>
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <nav >      
-                <ul class="nav-list">
-                    <li class="list-item"><a href="./index.html">Home</a></li>
-                    <li class="list-item"><a href="./aboutMe.html">About </a></li>
-                    <li class="list-item"><a href="./work.html">Work</a></li>
-                </ul>
-            </nav>
-            <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-            </label>
-        </header>
-        <body>
-            <div class="wrapper">
-                <div class="row">
-                    <div class="column">
-                        <h1> Netizens Collaborative WhiteBoard:To Draw & Listen To Music</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Collaborative Artware project by Nicole Avila: an experimental shared drawing and music space for anonymous creative expression.">
+    <title>Collaborative Artware — Nicole Avila</title>
+    <link rel="stylesheet" href="navigationBar.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body class="case-page theme-pink">
+    <header>
+        <a class="logo" href="./index.html" aria-label="Nicole Avila, home"><b>Nicole Avila</b></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="./index.html">Home</a></li><li><a href="./aboutMe.html">About</a></li><li><a class="active" aria-current="page" href="./work.html">Work</a></li><li><a href="./music.html">Music</a></li></ul></nav>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"><span></span></label>
+    </header>
 
-                        <p> Collaborative Artware is an experimental online drawing application made
-                            by me and other Media Art and Design at UChicago during our internet art III class.
-                            Collaborative Artware  was motivated by the question, " How should we create a website that is 
-                            both functional and experimental?" Additionally, Collaborative Artware was inspired by the way that 
-                            creative technologists work on commerical projects.
-                        </p>
-                        <p>
-                            This project forced us to think about other medias and ways to inspire creativity, increase unity,
-                            and increase fun amongst netizens. In the end, Collaborative Artware allows for one to select an avatar, 
-                            join an independent drawing board where they can create images to then use in the shared collaboration board. 
-                            Once the user is on the collaborative drawing board, they can draw and play music that someone else who is also on 
-                            the collaborative drawing board may view and hear.
-                            Anonymity is a topic frequently discussed and something we want our users to explore while they are 
-                            only able to interact with others through drawings and music preferences.
-                            With this, we raise the question, "How would the creativity experience for the user feel when collaboration is anonymous? "
-                        </p>
-                        <p>
-                            During the duration of this project, I was involved with the creative process and more particulary in 
-                            the design and incorporation of music within the collaborative space. This was my first exploration in internet music.
-                            I was able to allow shared music across all users on the page by having them user upload the Youtube Music video they would 
-                            like to listen to. When a user uploads, pauses, or unpauses the same output will occur for other users on the collaborative space.
-                            Why did I have them upload YouTube videos? Well as it turns out, different browsers process audio differently. 
-                            This makes it difficult to achieve shared music audio. This approach led me to learn about using YouTube's YTsampler. 
-                            Collaborative Artware is a website made using HTML/CSS, & Javascript.
-                            
-                            To checkout how the project was made or to simply run the app, follow 
-                            <a href="https://github.com/net-art-uchicago/collaborative-artware">this </a> link.
-                        </p>
-                        
-                    </div>
-                    <div class="column">
-                        <div class="demo-container1">
-                            <figure>
-                                <img src="Images/collaborativeArtware.png" class="demo1">
-                                <figcaption>Home Screen</figcaption>
-                            </figure>
-                        </div>
-                        <div class="demo-container2">
-                            <figure>
-                                <img src="Gifs/collaborationBoard.gif" class="demo2">
-                                <figcaption>Collaborative Drawing Board</figcaption>
-                            </figure>  
-                        </div>
-                        <div class="demo-container3">
-                            <figure> 
-                                <img src="Gifs/brushGen.gif" class="demo3">
-                                <figcaption>Customize & Save Your Brushes</figcaption>
-                            </figure>
-                        </div>
-                        <div class="demo-container4">
-                            <figure>
-                                <img src="Gifs/genAvatar.gif" class="demo4">
-                                <figcaption>Generate Avatar For Profile</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </body>
+    <main>
+        <a class="case-back" href="./work.html#creative-technology">← Back to selected work</a>
+        <section class="case-hero">
+            <p class="case-kicker">Internet art · collaboration · creative expression</p>
+            <h1>Collaborative Artware</h1>
+            <p class="case-deck">An experimental online drawing space where anonymous participants create independently, contribute to a shared canvas, and experience music together.</p>
+            <div class="case-actions"><a class="case-button" href="https://github.com/net-art-uchicago/collaborative-artware" target="_blank" rel="noopener noreferrer">View GitHub repository ↗</a></div>
+        </section>
+
+        <div class="case-layout">
+            <aside class="case-toc" aria-label="Case study contents"><p>On this page</p><ol><li><a href="#overview">Overview</a></li><li><a href="#premise">Guiding idea</a></li><li><a href="#experience">Experience</a></li><li><a href="#contribution">Contribution &amp; implementation</a></li><li><a href="#demo">Demo</a></li></ol></aside>
+            <article class="case-content">
+                <section class="case-section" id="overview"><p class="case-section-label">1 · Overview</p><h2>Drawing, listening, and creating together online</h2><p>Collaborative Artware is an experimental online drawing application created with other Media Arts and Design students at the University of Chicago. The project explored how a website could be both functional and experimental while encouraging creativity, connection, and play among people online.</p></section>
+
+                <section class="case-section" id="premise"><p class="case-section-label">2 · Guiding what-if</p><p class="question">What if we could create a collaborative art experience that brings people together while allowing each participant to remain anonymous?</p></section>
+
+                <section class="case-section" id="experience"><p class="case-section-label">3 · Experience</p><h2>From a personal brush to a shared canvas</h2><div class="process-grid process-grid-three process-flow-three"><div class="process-card"><h3>Create an identity</h3><p>Select or generate an avatar to enter the collaborative space.</p></div><div class="process-card"><h3>Make a brush</h3><p>Draw independently, then save an image to use as a custom brush.</p></div><div class="process-card"><h3>Collaborate</h3><p>Bring the brush to the shared board, where participants can draw and experience music together.</p></div></div></section>
+
+                <section class="case-section" id="contribution"><p class="case-section-label">4 · Contribution and implementation</p><h2>Music inside the collaborative space</h2><p>I contributed to the project’s creative direction, with a particular focus on designing and incorporating music into the shared experience. This was my first exploration of music on the internet as part of an interactive artwork.</p><p>I developed a way for participants to share YouTube music so that uploading, pausing, or resuming media would be reflected for other people in the collaborative space.</p><p>Different browsers process audio differently, which made shared playback difficult. The project used YouTube media and YTsampler as an approach to synchronized music playback. The website was built with HTML, CSS, and JavaScript.</p></section>
+
+                <section class="case-section" id="demo"><p class="case-section-label">5 · Demo</p><h2>Inside the experience</h2><div class="media-grid"><figure class="media-item media-cover"><img src="Images/collaborativeArtware.png" alt="Collaborative Artware home screen" loading="lazy"><figcaption>Home screen</figcaption></figure><figure class="media-item media-cover"><img src="Gifs/collaborationBoard.gif" alt="Animated demonstration of participants drawing on the collaborative board" loading="lazy"><figcaption>Collaborative drawing board</figcaption></figure><figure class="media-item media-cover"><img src="Gifs/brushGen.gif" alt="Animated demonstration of creating and saving a custom brush" loading="lazy"><figcaption>Customize and save a brush</figcaption></figure><figure class="media-item media-contain"><img src="Gifs/genAvatar.gif" alt="Animated demonstration of generating a profile avatar" loading="lazy"><figcaption>Generate a profile avatar</figcaption></figure></div></section>
+            </article>
+        </div>
+
+        <footer class="case-footer"><span>Collaborative Artware · Archived project</span><a href="./balloonTakeOff.html">Next: Balloon Take Off →</a></footer>
+    </main>
+</body>
 </html>

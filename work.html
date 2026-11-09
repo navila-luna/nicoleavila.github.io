@@ -1,69 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Work</title>
-    <link rel="stylesheet" type="text/css" href="navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="work.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected work by Nicole Avila across human-centered AI, product engineering, creative technology, and research.">
+    <title>Work — Nicole Avila</title>
+    <link rel="stylesheet" href="navigationBar.css">
+    <link rel="stylesheet" href="work.css">
 </head>
-<body>
+<body class="work-page">
     <header>
-        <label class= "logo"> <b>_____Nicole Avila_____</b> </label>
+        <a class="logo" href="./index.html" aria-label="Nicole Avila, home"><b>Nicole Avila</b></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav >      
+        <nav aria-label="Primary navigation">
             <ul class="nav-list">
                 <li><a href="./index.html">Home</a></li>
-                <li><a href="./aboutMe.html">About </a></li>
-                <li><a class="active" href="#">Work</a></li>
+                <li><a href="./aboutMe.html">About</a></li>
+                <li><a class="active" aria-current="page" href="./work.html">Work</a></li>
+                <li><a href="./music.html">Music</a></li>
             </ul>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"><span></span></label>
     </header>
-    <div class="container">
-        <div class="projects">
-            <div class="box-container">
-                <a href="./sequencers.html">
-                    <div class="sequencers-layer ">
-                        <button class="sequencers">Sequencers</button>
-                    </div>
-                </a>
-            </div>
-            <div class="box-container">
-                <a href="./collaborativeArtware.html">
-                    <div class="artware-layer collaborativePage">
-                        <button class="artware">Collaborative Artware</button>
-                    </div>
-                </a>
-            </div>
-            <div class="box-container">
-                <div class="video-layer">
-                    <button class="videos">Moving Art</button>
-                </div>
 
+    <main>
+        <section class="work-hero" aria-labelledby="work-title">
+            <p class="eyebrow">Selected work · engineering, research &amp; art</p>
+            <h1 id="work-title">I build technology for <span class="hero-motion"><span class="motion-word" style="--word-index: 0">human</span> <span class="motion-word" style="--word-index: 1">agency,</span> <span class="motion-word" style="--word-index: 2">learning,</span> <span class="motion-word" style="--word-index: 3">and</span> <span class="motion-word" style="--word-index: 4">connection.</span></span></h1>
+            <p class="hero-copy">I combine software engineering with human-centered design, exploring how technology can be both functional and thoughtful. My work spans product development, AI experimentation, interactive experiences, and creative coding.</p>
+            <a class="jump-link" href="#ai-engineering">Explore the work <span aria-hidden="true">↓</span></a>
+        </section>
+
+        <section class="project-section" id="ai-engineering" aria-labelledby="ai-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Systems that help people make sense of information</p>
+                    <h2 id="ai-title">AI &amp; Engineering</h2>
+                </div>
             </div>
-            <div class="box-container">
-                <a href="./music.html">
-                    <div class="music-layer">
-                        <button class="music">Music</button>
+            <div class="project-grid project-grid-featured">
+                <a class="project-card featured-card accent-violet" href="./analyst-agent.html">
+                    <div class="card-media analyst-visual" aria-hidden="true">
+                        <span class="node node-one">search</span><span class="connection"></span><span class="node node-two">answer</span>
+                        <span class="signal">document → retrieval → decision</span>
+                    </div>
+                    <div class="card-copy">
+                        <div class="card-meta"><span>Human-centered AI</span><span class="status complete">MVP 1 complete</span></div>
+                        <h3>Analyst Agent</h3>
+                        <p>A RAG-based document question-answering system exploring retrieval, MCP tools, orchestration, and model evaluation.</p>
+                        <span class="card-link">Read the case study <span aria-hidden="true">↗</span></span>
+                    </div>
+                </a>
+                <a class="project-card accent-cyan" href="./focusflow.html">
+                    <div class="card-media focus-visual" aria-hidden="true">
+                        <span class="thought thought-a">too many tabs</span><span class="thought thought-b">send email</span><span class="thought thought-c">new idea</span>
+                        <span class="focus-line"></span><span class="focus-label">one clear next step</span>
+                    </div>
+                    <div class="card-copy">
+                        <div class="card-meta"><span>Product design</span><span class="status ongoing">Ongoing</span></div>
+                        <h3>FocusFlow</h3>
+                        <p>An ADHD-focused work-planning tool combining prioritized goals, subtasks, a focus timer, and AI-assisted planning.</p>
+                        <span class="card-link">View project direction <span aria-hidden="true">↗</span></span>
                     </div>
                 </a>
             </div>
-            <div class="box-container">
-                <a href="./balloonTakeOff.html">
-                    <div class="capstone-layer">
-                        <button class="balloonTakeOff">Balloon Take Off</button>
+        </section>
+
+        <section class="project-section" id="creative-technology" aria-labelledby="creative-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Tools for reflection, learning &amp; expression</p>
+                    <h2 id="creative-title">Human-Centered Design &amp; Creative Technology</h2>
+                </div>
+            </div>
+            <div class="project-grid">
+                <a class="project-card accent-coral" href="./moodbirdie.html">
+                    <div class="card-media mood-visual" aria-hidden="true"><span class="bird-orbit"></span><span class="bird-mark">mood / reflection / care</span></div>
+                    <div class="card-copy">
+                        <div class="card-meta"><span>Well-being · UX research</span><span class="status ongoing">Case study in progress</span></div>
+                        <h3>MoodBirdie</h3>
+                        <p>A wellness application concept supporting emotional self-reflection, personal growth, and human autonomy.</p>
+                        <span class="card-link">Read the case study <span aria-hidden="true">↗</span></span>
+                    </div>
+                </a>
+                <a class="project-card accent-yellow" href="./diatomic-harmony.html">
+                    <div class="card-media harmony-visual" aria-hidden="true">
+                        <span class="key key-one"></span><span class="key key-two"></span><span class="key key-three"></span><span class="key key-four"></span><span class="chord">I · IV · V · vi</span>
+                    </div>
+                    <div class="card-copy">
+                        <div class="card-meta"><span>Creative learning</span><span class="status prototype">Interactive app live</span></div>
+                        <h3>Diatomic Harmony</h3>
+                        <p>A working interactive music theory app exploring chord progressions, songwriting, and more accessible independent learning.</p>
+                        <span class="card-link">Explore the project <span aria-hidden="true">↗</span></span>
+                    </div>
+                </a>
+                <a class="project-card image-card accent-pink" href="./collaborativeArtware.html">
+                    <div class="card-media image-media"><img src="./Images/collaborativeArtware.png" alt="Colorful Collaborative Artware landing screen" loading="lazy"></div>
+                    <div class="card-copy">
+                        <div class="card-meta"><span>Internet art · collaboration</span><span class="status archive">Archived project</span></div>
+                        <h3>Collaborative Artware</h3>
+                        <p>An experimental shared drawing space for anonymous creative expression through images and music.</p>
+                        <span class="card-link">Explore the project <span aria-hidden="true">↗</span></span>
+                    </div>
+                </a>
+                <a class="project-card image-card accent-blue" href="./balloonTakeOff.html">
+                    <div class="card-media image-media"><img src="./Gifs/balloonRelease.gif" alt="Animated balloon rising into a starry sky" loading="lazy"></div>
+                    <div class="card-copy">
+                        <div class="card-meta"><span>Interactive wellness</span><span class="status archive">Completed project</span></div>
+                        <h3>Balloon Take Off</h3>
+                        <p>A visual and auditory breathing experience shaped by a personal memory of learning to move through anxiety.</p>
+                        <span class="card-link">Explore the project <span aria-hidden="true">↗</span></span>
                     </div>
                 </a>
             </div>
-            <div class="box-container">
-                <a href="./inProgress.html">
-                    <div class="inProgress-layer">
-                        <button class="inProgress">Ideas in Progress...</button>
-                    </div>
-                </a>
+        </section>
+
+        <section class="project-section" id="research" aria-labelledby="research-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">Questions, analysis &amp; evidence</p><h2 id="research-title">Research</h2></div>
             </div>
-        </div>
-    </div>
+            <div class="research-list">
+                <article class="research-card">
+                    <p class="research-type">Data &amp; Computing Summer Lab 2021 · University of Chicago</p>
+                    <h3>AWS Spot Market pricing analysis</h3>
+                    <div class="research-details">
+                        <p>Compared 2018 and 2021 AWS Spot Market pricing and availability across fourth- and fifth-generation instances using Python, pandas, Jupyter Notebook, and Matplotlib.</p>
+                        <a class="research-link" href="./Images/DSIInternship.png" target="_blank" rel="noopener noreferrer">View research poster <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="research-card">
+                    <p class="research-type">AP Research</p>
+                    <h3>Tracking &amp; Managing Mental Health</h3>
+                    <div class="research-details">
+                        <p>Explored whether a free website for tracking mood, sleep, diet, stress, and exercise could encourage adolescents to reflect more critically on their mental health and recognize when to seek additional support.</p>
+                        <a class="research-link" href="./Images/apResearchPoster.pdf" target="_blank" rel="noopener noreferrer">View research poster <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="project-section" id="creative-work" aria-labelledby="additional-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">Experiments in sound, code &amp; performance</p><h2 id="additional-title">Additional Creative Work</h2></div>
+            </div>
+            <div class="creative-links">
+                <article class="creative-project">
+                    <div class="creative-project-copy">
+                        <span>Shooting Stars</span>
+                        <small>2026 · Web scraping · GitHub Actions · cron scheduling · Three.js</small>
+                        <p>Built around the Standaretopost 30-day Instagram challenge, Shooting Stars gathers the day’s participants around 3 p.m. and offers a playful way to discover people pursuing something meaningful to them. Each shooting star represents a dreamer and the dream they are actively pursuing.</p>
+                    </div>
+                    <div class="creative-project-actions" aria-label="Shooting Stars project links">
+                        <a href="https://navila-luna.github.io/ShootingStars/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span></a>
+                        <a href="https://www.instagram.com/reel/DVh159JAsIS/?utm_source=ig_web_copy_link&amp;igsh=NTc4MTIwNjQ2YQ%3D%3D" target="_blank" rel="noopener noreferrer">Video demo <span aria-hidden="true">↗</span></a>
+                        <a href="https://github.com/navila-luna/ShootingStars" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <a href="./sequencers.html"><span>Party Parrot Sequencer</span><small>2023 · Tone.js · web audio</small><b aria-hidden="true">↗</b></a>
+            </div>
+        </section>
+
+        <footer class="work-footer"><p>Nicole Avila · engineer, researcher, and artist</p><a href="#work-title">Back to top ↑</a></footer>
+    </main>
 </body>
 </html>

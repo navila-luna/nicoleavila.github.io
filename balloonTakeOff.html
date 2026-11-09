@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <meta charset=" UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="navigationBar.css">
-        <link rel="stylesheet" href="balloonTakeOff.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Balloon Take Off project by Nicole Avila: an interactive visual and auditory breathing experience.">
+    <title>Balloon Take Off — Nicole Avila</title>
+    <link rel="stylesheet" href="navigationBar.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body class="case-page theme-blue">
     <header>
-        <label class= "logo"> <b>_____Nicole Avila_____</b> </label>
+        <a class="logo" href="./index.html" aria-label="Nicole Avila, home"><b>Nicole Avila</b></a>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav >      
-            <ul class="nav-list">
-                <li class="list-item"><a href="./index.html">Home</a></li>
-                <li class="list-item"><a href="./aboutMe.html">About </a></li>
-                <li class="list-item"><a href="./work.html">Work</a></li>
-            </ul>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-        </label>
+        <nav aria-label="Primary navigation"><ul class="nav-list"><li><a href="./index.html">Home</a></li><li><a href="./aboutMe.html">About</a></li><li><a class="active" aria-current="page" href="./work.html">Work</a></li><li><a href="./music.html">Music</a></li></ul></nav>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"><span></span></label>
     </header>
-    <div class="wrapper">
-        <div class="row">
-            <div class="column">
-                <h1>Balloon TakeOff</h1>
-                <p> Balloon TakeOff aims to provide a visual an auditory experience for practing 
-                    the box-breathing and 4-7-8 breathing technique. This project was inspired from
-                    the breathing technique my 6th grade English teacher taught me while I was experiencing
-                    my first panic attack in middle school. My teacher took me outside of the class, sat me down
-                    and told me to imagine I was holding a deflated air balloon. He told me to imagine putting all 
-                    things I'm worried about in the balloon. Once I'm done, he then tells me to begin inflating
-                    it by taking deep breaths. Once I'm done inflating, he tells me to lift the balloon up and 
-                    imagine it heading higher off to the sky.
-                 </p>
-                 <p>
-                    Balloon TakeOff takes one through how I felt and pictured the moment in which my 
-                    teacher walked me through deep breathing.Balloon Takeoff can be viewed as a 3 step activity:
-                    Activity 1: Writing worries out.
-                    Activity 2: 3 repetitions of deep breaths
-                    Activity 3: Watching the release of the balloon.
-                 </p>
-                 <p>
-                    Balloon TakeOff was made using three.js for animations and 3D visuals of the balloon and stars. 
-                    HTML/CSS as well as Javascript were used for creating the styling and functionality of the game.
-                    Music was made using MAX, Reaper, and some sampled sounds. When I write, sing, or play music, 
-                    I picture a scene like in a movie or music video that I am capturing. Each song plays a different
-                    scene in a story of serenity that I imagine in that very moment I play. 
-                 </p>
-            </div>
-            <div class="column">
-                <div class="demo-container1">
-                    <img src="Gifs/beginingActivity.gif" class="demo1">
-                </div>
-                <div class="demo-container2">
-                    <img src="Gifs/balloonRelease.gif" class="demo2">
-                </div>
-            </div>
+
+    <main>
+        <a class="case-back" href="./work.html#creative-technology">← Back to selected work</a>
+        <section class="case-hero">
+            <p class="case-kicker">Interactive wellness · creative technology</p>
+            <h1>Balloon Take Off</h1>
+            <p class="case-deck">A visual and auditory breathing experience shaped by a personal memory of learning how imagination and deep breathing could create space during anxiety.</p>
+        </section>
+
+        <div class="case-layout">
+            <aside class="case-toc" aria-label="Case study contents"><p>On this page</p><ol><li><a href="#overview">Overview</a></li><li><a href="#origin">Origin</a></li><li><a href="#experience">Experience</a></li><li><a href="#implementation">Implementation</a></li><li><a href="#demo">Demo</a></li></ol></aside>
+            <article class="case-content">
+                <section class="case-section" id="overview"><p class="case-section-label">1 · Overview</p><h2>Breathing through a visual story</h2><p>Balloon Take Off is an interactive experience for practicing box breathing and the 4-7-8 breathing technique. It combines writing, guided breathing, animation, and sound to move through a moment of worry and toward release.</p></section>
+
+                <section class="case-section" id="origin"><p class="case-section-label">2 · Origin</p><h2>A memory of learning to pause</h2><p>The project was inspired by the breathing technique my sixth-grade English teacher taught me when I experienced my first panic attack in middle school. My teacher took me outside, sat with me, and asked me to imagine holding a deflated balloon.</p><p>I imagined placing everything I was worried about inside it, inflating it through deep breaths, and then lifting it into the air and watching it travel into the sky. Balloon Take Off recreates the way I pictured and felt that moment.</p></section>
+
+                <section class="case-section" id="experience"><p class="case-section-label">3 · Experience flow</p><h2>Write, breathe, release</h2><div class="process-grid process-grid-three process-flow-three"><div class="process-card"><h3>Write</h3><p>Put worries into words before beginning the breathing exercise.</p></div><div class="process-card"><h3>Breathe</h3><p>Complete three repetitions of guided deep breathing.</p></div><div class="process-card"><h3>Release</h3><p>Watch the balloon rise and carry the written worries into the sky.</p></div></div></section>
+
+                <section class="case-section" id="implementation"><p class="case-section-label">4 · Implementation and sound</p><h2>Building atmosphere through code and music</h2><p>I used Three.js to create the animated balloon and star-filled 3D environment, with HTML, CSS, and JavaScript supporting the interface and experience flow.</p><p>I created the music using Max, Reaper, and sampled sounds. When I write, sing, play, or produce music, I often picture a scene from a film or music video. The sound for Balloon Take Off extends that way of working into an interactive story of serenity.</p></section>
+
+                <section class="case-section" id="demo"><p class="case-section-label">5 · Demo</p><h2>The breathing experience in motion</h2><div class="media-grid"><figure class="media-item media-cover"><img src="Gifs/beginingActivity.gif" alt="Animated demonstration of the opening Balloon Take Off breathing activity" loading="lazy"><figcaption>Beginning the activity</figcaption></figure><figure class="media-item media-cover"><img src="Gifs/balloonRelease.gif" alt="Animated balloon rising into a starry sky at the end of the activity" loading="lazy"><figcaption>Releasing the balloon</figcaption></figure></div></section>
+            </article>
         </div>
-    </div>
-    </body>
- </html>
+
+        <footer class="case-footer"><span>Balloon Take Off · Completed project</span><a href="./work.html#creative-technology">More selected work →</a></footer>
+    </main>
+</body>
+</html>

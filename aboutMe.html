@@ -1,86 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About Me</title>
-    <!-- <link rel="stylesheet" href="homepage.css"> -->
-    <link rel="stylesheet" type="text/css" href="aboutMeBasic.css">
-    <link rel="stylesheet" type="text/css" href="navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="movingText.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Nicole Avila, an interdisciplinary engineer, artist, and human-centered designer.">
+    <title>About — Nicole Avila</title>
+    <link rel="stylesheet" href="navigationBar.css">
+    <link rel="stylesheet" href="aboutMeBasic.css">
 </head>
-    <body>
-        <div class="flex-container">
-            <header>
-              <label class="logo"><b>Who is Nicole?</b></label>
-              <input type="checkbox" id="nav-toggle" class="nav-toggle">
-              <label for="nav-toggle" class="nav-toggle-label">
-                <span></span>
-              </label>
-              <nav>
-                <ul class="nav-list">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a class="active" href="#">About </a></li>
-                    <li class="list-item"><a href="./work.html">Work</a></li>
-                </ul>
-              </nav>
-            </header>
-        </div> 
-    <div class="profilePic">
-        <img src="Images/cestMoi.jpeg" class="pictures">
-    </div>
-    <div class="container">
-        <span class="text first-text"> I'm </span>
-        <span class="text sec-text"></span> 
-    </div>
-    <div class="aboutme">
-        <div  class="outer-box">
-        <div class="text-container">
-            <p> 
-                    <span style="font-size:45pt">Hey there, </span>bienvenidos to my website! My name is Nicole Avila and 
-                    I'm a proud first-gen Mexican raised in Chapel Hill, North Carolina.
-                    I'm an aspiring artist interested in the interesection between music production and web development.
-                    I'm also very passionate about mental health and finding ways to encourage adolescents to become 
-                    more self-aware about their mental health.
-            </p>
-            <p>
-                    I graduated from The University of Chicago double majoring in computer science and 
-                    media arts and design with specializations in human computer interaction and electronic music.
-                    Currently, I'm working at Fidelity Investments as a software engineer!
-                    Some of my hobbies include watching music videos, singing, and coming up with some melodies.         
-            </p>
-            <p> Feel free to connect with me through gmail or LinkedIn! 
-                I am always down to have a chat either in person or through zoom!
-            </p>            
-            <div class="contact-info">
-                <a href="https://www.linkedin.com/in/nicole-avila-b3a9a31b1/">
-                    <img src="Images/linkedInLogo.png" class="linkedIn">
+<body class="about-page">
+    <header>
+        <a class="logo" href="./index.html" aria-label="Nicole Avila, home"><b>Nicole Avila</b></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav aria-label="Primary navigation">
+            <ul class="nav-list">
+                <li><a href="./index.html">Home</a></li>
+                <li><a class="active" aria-current="page" href="./aboutMe.html">About</a></li>
+                <li><a href="./work.html">Work</a></li>
+                <li><a href="./music.html">Music</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation"><span></span></label>
+    </header>
+
+    <main>
+        <section class="about-hero" aria-labelledby="about-title">
+            <div class="about-intro">
+                <p class="eyebrow">Engineer · artist · human-centered designer</p>
+                <h1 id="about-title">Hey there, <span>bienvenidos.</span></h1>
+                <p class="identity-line" aria-label="I’m a creator, artist, dreamer, programmer, music fanatic, and bird lover.">I’m <span class="sec-text" aria-hidden="true">a creator</span></p>
+            </div>
+            <figure class="profile-portrait">
+                <img src="Images/cestMoi.jpeg" alt="Portrait of Nicole Avila">
+            </figure>
+        </section>
+
+        <section class="about-story" aria-label="About Nicole">
+            <div class="story-copy">
+                <p>I’m a <span>first-generation Mexican American</span> raised in Chapel Hill, North Carolina. I studied <span>Computer Science and Media Arts &amp; Design</span> at the University of Chicago, specializing in Human-Computer Interaction and Electronic Music. Today, I work as a <span>full-stack software engineer at Dimensional Fund Advisors</span>. Outside of engineering, I love singing, songwriting, and experimenting creatively. I’m curious about how technology can help us express ourselves, better understand ourselves, and connect with others.</p>
+            </div>
+
+            <div class="research-narrative">
+                <div class="narrative-copy">
+                    <p class="story-label">Research origins</p>
+                    <p>My interest in computer science began with a high school research project on adolescent mental health and self-reflection. I became fascinated by the possibility of turning ideas into tools that could help people beyond my immediate community. At the time, I didn’t know the term <em>Human-Computer Interaction</em>, but I was already drawn to the questions behind it.</p>
+                </div>
+                <figure class="story-photo photo-cyan poster-card">
+                    <a class="poster-link" href="Images/AP Research Year Long Project.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open the full AP Research poster as a PDF">
+                        <img src="Images/ap-research-poster.png" alt="AP Research poster titled Tracking and Managing Mental Health, including the research question, methods, survey results, conclusions, and recommendations">
+                    </a>
+                    <figcaption><strong>AP Research</strong><span>Tracking &amp; Managing Mental Health</span></figcaption>
+                </figure>
+            </div>
+
+            <div class="journey-copy">
+                <p>Curiosity has led me to explore research and software engineering across public service, big tech, and financial technology. I intentionally sought out different environments to broaden my perspective and better understand the challenges people and organizations face.</p>
+                <p>At the Centers for Medicare &amp; Medicaid Services, I began to recognize that sometimes building the tool is the easiest part. The greater challenges often lie in cross-functional collaboration, communication, and bridging gaps in technical understanding. That experience taught me the importance of working with people from different backgrounds and translating technical ideas into solutions everyone can understand and contribute to.</p>
+            </div>
+
+            <div class="teaching-narrative">
+                <div class="narrative-copy">
+                    <p class="story-label">Teaching &amp; mentorship</p>
+                    <p>Teaching and mentorship have also been a meaningful part of my journey. These experiences reflect how much I value helping others develop confidence and find opportunities to grow.</p>
+                </div>
+                <div class="teaching-record" aria-label="Mentoring and teaching experience">
+                    <div class="teaching-item"><span>University of Chicago</span><p>Teaching assistant for Usable Security &amp; Privacy.</p></div>
+                    <div class="teaching-item"><span>University of Chicago</span><p>Teaching assistant for Data Structures &amp; Algorithms II.</p></div>
+                    <div class="teaching-item"><span>Maroon Mentors · 2021–2023</span><p>Mentored first-generation college students.</p></div>
+                    <div class="teaching-item"><span>CodePath · 2024</span><p>Technical Fellow.</p></div>
+                </div>
+            </div>
+
+            <div class="story-gallery supporting-gallery" aria-label="Personal photos to be added">
+                <figure class="story-photo photo-violet">
+                    <div class="photo-placeholder"><span>Photo to add</span></div>
+                    <figcaption><strong>Sharing ideas</strong><span>School or CMS presentation</span></figcaption>
+                </figure>
+                <figure class="story-photo photo-coral">
+                    <div class="photo-placeholder"><span>Photo to add</span></div>
+                    <figcaption><strong>Another chapter</strong><span>Third image to be selected</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="connect-section" aria-labelledby="connect-title">
+            <h2 id="connect-title">Let’s connect.</h2>
+            <p class="connect-copy">I’m always happy to have a conversation, whether in person or over Zoom.</p>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/nicole-avila-b3a9a31b1/" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/linkedInLogo.png" alt="">
+                    <span>LinkedIn</span>
+                    <b aria-hidden="true">↗</b>
                 </a>
                 <a href="mailto:nicolerivera806@gmail.com">
-                    <img src="Images/gmailLogo.png" class="gmail">
+                    <img src="Images/gmailLogo.png" alt="">
+                    <span>Email</span>
+                    <b aria-hidden="true">↗</b>
                 </a>
-                <a href="https://github.com/navila-luna">
-                    <img src="Images/githubLogo.jpeg" class="github">
+                <a href="https://github.com/navila-luna" target="_blank" rel="noopener noreferrer">
+                    <img src="Images/githubLogo.jpeg" alt="">
+                    <span>GitHub</span>
+                    <b aria-hidden="true">↗</b>
                 </a>
             </div>
-    </div>
+        </section>
 
-        <!-- Moving Text -->
-    <div>
+        <footer class="about-footer">
+            <p>Nicole Avila · engineer, researcher, and artist</p>
+            <a href="./work.html">Explore my work →</a>
+        </footer>
+    </main>
+
     <script>
-        const text = document.querySelector(".sec-text");
-        const self_descriptor = ["a creator", "an artist", "a dreamer", "a programmer", "music fanatic", "bird lover 🦜"];
-        
-        const textLoad = () => {
-            for(let i  = 0; i < self_descriptor.length; i++){
-                console.log(i)
-                setTimeout(() => {
-                    text.textContent = self_descriptor[i];
-                    
-                }, i * 4000);
-            }
+        const descriptor = document.querySelector(".sec-text");
+        const descriptors = ["a creator", "an artist", "a dreamer", "a programmer", "a music fanatic", "a bird lover 🦜"];
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (!reduceMotion) {
+            let descriptorIndex = 0;
+            let characterIndex = 0;
+            let deleting = false;
+
+            const typeDescriptor = () => {
+                const currentDescriptor = descriptors[descriptorIndex];
+                descriptor.textContent = currentDescriptor.slice(0, characterIndex);
+
+                if (!deleting && characterIndex < currentDescriptor.length) {
+                    characterIndex += 1;
+                    window.setTimeout(typeDescriptor, 105);
+                } else if (!deleting) {
+                    deleting = true;
+                    window.setTimeout(typeDescriptor, 1600);
+                } else if (characterIndex > 0) {
+                    characterIndex -= 1;
+                    window.setTimeout(typeDescriptor, 55);
+                } else {
+                    deleting = false;
+                    descriptorIndex = (descriptorIndex + 1) % descriptors.length;
+                    window.setTimeout(typeDescriptor, 350);
+                }
+            };
+
+            descriptor.textContent = "";
+            typeDescriptor();
         }
-        textLoad();
-        setInterval(textLoad, 12000);
     </script>
-</div>
-    </body>
+</body>
 </html>

@@ -26,7 +26,7 @@
         <li><a href="#overview">Overview</a></li><li><a href="#question">Research questions</a></li><li><a href="#methods">Methods</a></li><li><a href="#results">Emerging insight</a></li><li><a href="#architecture">Design insight</a></li><li><a href="#reflection">Reflection &amp; future direction</a></li><li><a href="#media">Demos</a></li>
       </ol></aside>
       <article class="case-content">
-        <section class="case-section" id="overview"><p class="case-section-label">1 · Overview</p><h2>From retrieval pipeline to agent behavior</h2><p>An experimental AI document analysis system exploring retrieval-augmented generation, MCP-based tool integration, and agent orchestration. Built to investigate how AI agents retrieve evidence, make SEARCH/ANSWER decisions, and produce grounded responses, with ongoing evaluation of retrieval quality, model performance, and decision-making reliability.</p></section>
+        <section class="case-section" id="overview"><p class="case-section-label">1 · Overview</p><p>An experimental AI document analysis system exploring retrieval-augmented generation, MCP-based tool integration, and agent orchestration. Built to investigate how AI agents retrieve evidence, make SEARCH/ANSWER decisions, and produce grounded responses, with ongoing evaluation of retrieval quality, model performance, and decision-making reliability.</p></section>
         <section class="case-section" id="question">
           <p class="case-section-label">2 · Research questions</p>
           <h3>Primary question</h3>
@@ -38,7 +38,6 @@
         </section>
         <section class="case-section" id="methods">
           <p class="case-section-label">3 · Implementation and research methods</p>
-          <h2>Expanding the interface beyond semantic search</h2>
           <p>Analyst Agent began as a self-directed exploration of retrieval-augmented generation (RAG), Model Context Protocol (MCP), and AI agent orchestration. For the first MVP, I developed a document question-answering system that combines semantic retrieval with an agentic SEARCH/ANSWER loop.</p>
           <h3>System architecture</h3>
           <figure class="media-item diagram-item">
@@ -64,7 +63,6 @@
         </section>
         <section class="case-section" id="results">
           <p class="case-section-label">4 · Emerging insight</p>
-          <h2>Beyond similarity-based retrieval</h2>
           <p>During preliminary benchmarking, I observed that Analyst Agent generally retrieved relevant information successfully from a small document collection. However, some requests exposed limitations that could not be resolved simply by improving similarity scores or increasing the number of retrieved chunks.</p>
           <p>The original pipeline was built around an assumption: <strong>a user’s question can be answered using a small set of independently retrieved document chunks.</strong> While this approach is effective for targeted factual lookups, more complex requests may require a fundamentally different information-access strategy.</p>
           <div class="evidence-note"><p><strong>Example request:</strong> <em>“Review these two case studies and generate three original discussion questions based on the arguments presented.”</em></p></div>
@@ -80,7 +78,6 @@
         </section>
         <section class="case-section" id="architecture">
           <p class="case-section-label">5 · Design insight</p>
-          <h2>Applying HCI principles to agent interfaces</h2>
           <p>Benchmarking showed that some limitations were not simply caused by retrieval accuracy or language-model performance. They reflected a mismatch between the tasks users wanted to accomplish and the capabilities available to the agent.</p>
           <p>Reading about Agent-Computer Interaction (ACI) helped me recognize a connection to my background in Human-Computer Interaction (HCI). Both involve understanding the tasks an interface must support, identifying interaction failures, designing appropriate capabilities, and evaluating whether those capabilities enable successful task completion.</p>
           <p>Just as human-facing interfaces must support what people want to accomplish, agent-facing interfaces must expose capabilities that allow AI systems to complete their assigned tasks reliably. Improving an AI system does not always require a more capable model; sometimes it requires redesigning the environment and interfaces through which the model operates.</p>
@@ -88,14 +85,12 @@
         </section>
         <section class="case-section" id="reflection">
           <p class="case-section-label">6 · Reflection and future direction</p>
-          <h2>The question shifted from retrieval quality to sufficient evidence</h2>
           <p>My initial interest was understanding how RAG, MCP, and agent orchestration work together. Benchmarking revealed that the more consequential challenge was determining whether the system had retrieved sufficient and appropriate information for the user’s actual goal.</p>
           <p>The expanded architecture is implemented. The next step is comparative evaluation: testing whether the additional tools improve evidence relevance and completeness across factual lookup, summarization, comparison, and synthesis tasks.</p>
           <div class="evidence-note"><p><strong>Current boundary:</strong> Document discovery and ordered reading are implemented alongside semantic search. Their comparative effectiveness—and the agent’s ability to select among them reliably—remains an area for further investigation.</p></div>
         </section>
         <section class="case-section" id="media">
           <p class="case-section-label">7 · Demos</p>
-          <h2>Three request patterns</h2>
           <p>These recordings show how Analyst Agent handles a direct document question, a question that requires additional searching to gather enough context, and a request that reads across multiple sources before generating new material grounded in those documents.</p>
           <div class="media-grid analyst-demo-grid">
             <figure class="media-item analyst-demo-item">
